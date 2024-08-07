@@ -13,12 +13,17 @@ cors = CORS(app, resources={
 
 @app.route('/')
 def home():
-    return "Server is healthy"
+    return "Server is healthy!"
 
 
-@app.route('/image', methods=['POST'])
-def ocr():
-    return "OCR"
+@app.route('/speech', methods=['POST'])
+def speech_to_text():
+    # voice upload to './voice/'
+
+    # get text response with function speech_to_text(path)
+
+    # get voice & text response with function gpt_translation(text)
+    return "Response : speech_to_text"
 
 
 if __name__ == "__main__":
