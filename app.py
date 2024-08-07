@@ -1,5 +1,9 @@
 from flask import Flask
 from flask_cors import CORS
+import os
+
+# google cloud speech to text
+os.environ["GOOGLE_APPLICATION_CREDENTIALS"] = "./config/service-account-file.json"
 
 app = Flask(__name__)
 cors = CORS(app, resources={
